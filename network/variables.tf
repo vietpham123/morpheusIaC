@@ -32,3 +32,28 @@ variable "azRegion" {
    type = string
    description = "Azure region to deploy in"
 }
+
+variable "azVirtualNetworkName" {
+   type = string
+   description = "Azure Virtual network Name"
+}
+
+variable "azAddressCIDR" {
+    type = string
+    description = "Address CIDR for Virtual Network"
+}
+
+variable "azSubnet" {
+    type = string
+    description = "Name of Azure Subnet"
+}
+
+variable "azAddressPrefixes" {
+    type = string
+    description = "Address Prefix for Subnet"
+}
+
+variable "azNetworkSecurityGroup" {
+    type = string
+    description - "Name for Azure Network Security Group"
+}
