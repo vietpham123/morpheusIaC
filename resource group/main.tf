@@ -13,7 +13,7 @@ provider "azurerm" {
 
   subscription_id = var.subscription_ID
   tenant_id = var.tenant_ID
-  client_id = var.appID
+  client_id = var.client_ID
   client_secret = var.client_secret
 }
 
