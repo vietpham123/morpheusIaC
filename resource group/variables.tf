@@ -1,6 +1,6 @@
 # variable file for creating a resource Group
 
-variable "appID" {
+variable "client_ID" {
     type = string
     description = "AppId for Azure"
     default = ""
