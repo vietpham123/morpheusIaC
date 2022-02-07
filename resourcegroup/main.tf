@@ -7,16 +7,6 @@ terraform {
   }
 }
 
-variable "azResourceGroupName" {
-    type = string
-    description = "Desired Resource Group Name"
-}
-
-variable "azRegion" {
-    type = string
-    description = "Desired Azure Region"
-}
-
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
