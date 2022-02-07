@@ -8,7 +8,6 @@ resource "azurerm_virtual_network" "hashinet" {
   tags = {
     environment = "Terraform Demo"
   }
-  depends_on = azurerm_resource_group.morpheus
 }
 
 # Create subnet
@@ -17,7 +16,6 @@ resource "azurerm_subnet" "hashisubnet" {
   resource_group_name  = var.azResourceGroupName
   virtual_network_name = azurerm_virtual_network.hashinet.name
   address_prefixes     = ["10.0.1.0/24"]
-  depends_on = azurerm_resource_group.morpheus
 }
 
 # Create Network Security Group and Rule
@@ -49,7 +47,6 @@ resource "azurerm_network_security_group" "hashinsg" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
-  depends_on = azurerm_resource_group.morpheus
 }
 
 output "virtual_network" {
